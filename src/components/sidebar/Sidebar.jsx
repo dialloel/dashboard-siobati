@@ -5,6 +5,7 @@ import {BiTrendingUp,BiMessage } from 'react-icons/bi'
 import {AiOutlineUserSwitch,AiOutlineMail } from 'react-icons/ai'
 import {BsFillBoxSeamFill,BsCashCoin } from 'react-icons/bs'
 import {HiOutlineDocumentReport } from 'react-icons/hi'
+import { Link } from 'react-router-dom'
 
 const  Sidebar = () =>{
   return (
@@ -13,10 +14,12 @@ const  Sidebar = () =>{
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              <MdLineStyle className='sidebarIcon'/>
-              Home
-            </li>
+            <Link to="/" className='link'>
+              <li className="sidebarListItem active">
+                <MdLineStyle className='sidebarIcon'/>
+                Home
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <MdTimeline className='sidebarIcon'/>
               Analytics
@@ -30,14 +33,18 @@ const  Sidebar = () =>{
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
+          <Link to="/users" className='link'>
             <li className="sidebarListItem ">
               <AiOutlineUserSwitch className='sidebarIcon'/>
               Users
             </li>
+          </Link>
+          <Link to="/products" className='link'>
             <li className="sidebarListItem">
               <BsFillBoxSeamFill className='sidebarIcon'/>
               Products
             </li>
+          </Link>
             <li className="sidebarListItem">
               <BsCashCoin className='sidebarIcon'/>
               Transactions
